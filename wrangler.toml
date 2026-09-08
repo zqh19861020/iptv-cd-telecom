@@ -1,3 +1,0 @@
-name = "iptv-proxy"
-main = "functions/udpxy/[domain].js"
-compatibility_date = "2026-09-08"

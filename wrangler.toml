@@ -1,3 +1,4 @@
-name = "my-iptv-proxy"
-main = "src/index.js"
-compatibility_date = "2024-09-08"
+name = "m3u"
+main = "functions/udpxy/[domain].js"
+compatibility_date = "2025-09-24"
+keep_vars = true

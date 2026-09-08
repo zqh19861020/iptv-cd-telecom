@@ -64,7 +64,12 @@ export async function onRequest(context) {
             }
         }
         if (rtspProxy && line.indexOf("catchup-source=\"rtsp://") > 0) {
+            // ========== 修改点开始 ==========
+            // 将 rtsp:// 替换为 http://代理/rtsp/
             line = line.replaceAll("catchup-source=\"rtsp://", `catchup-source="${rtspProxy}/rtsp/`);
+            // 【关键新增】在域名和 /PLTV/ 之间插入 :554 端口
+            line = line.replaceAll("/PLTV/", ":554/PLTV/");
+            // ========== 修改点结束 ==========
             if (r2hToken) {
                 const match = line.match(/catchup-source="([^"]+)"/);
                 if (match) {

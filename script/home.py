@@ -23,7 +23,7 @@ listUnused = ["单音轨", "画中画", "热门", "直播室", "爱", "92", "创
               "戏曲专区", "生活时尚", "足球高清专区", "红色影院专区", "经典剧场专区", "解密高清专区", "地理高清专区", "导视专区", "来钓鱼",
               "麻辣体育", "绚影", "亲子趣学", "中录动漫", "中国体育", "健康养生", "SCTV-6", "CETV-4"]
 
-orders = ["CCTV", "卫视", "四川", "其他"]
+orders = ["CCTV", "卫视", "四川", "其他", "港澳"]
 
 
 
@@ -91,19 +91,19 @@ def generateUdpxyM3U8(file):
 
             file.write(line)
             file.write(line2)
-#     file.write(f"""#KODIPROP:inputstream=inputstream.ffmpegdirect
-# #EXTINF:-1 tvg-name="凤凰中文" tvg-logo="https://iptv.zsdc.eu.org/logo/凤凰中文.png" group-title="港澳",凤凰中文
-# {homeLanAddress}/udp/239.94.2.52:5140
-# #KODIPROP:inputstream=inputstream.ffmpegdirect
-# #EXTINF:-1 tvg-name="凤凰资讯" tvg-logo="https://iptv.zsdc.eu.org/logo/凤凰资讯.png" group-title="港澳",凤凰资讯
-# {homeLanAddress}/udp/239.94.2.49:5140
-# #KODIPROP:inputstream=inputstream.ffmpegdirect
-# #EXTINF:-1 tvg-name="星空卫视" tvg-logo="https://iptv.zsdc.eu.org/logo/星空卫视.png" group-title="港澳",星空卫视
-# {homeLanAddress}/udp/239.94.2.53:5140
-# #KODIPROP:inputstream=inputstream.ffmpegdirect
-# #EXTINF:-1 tvg-name="Channel[V]" tvg-logo="https://iptv.zsdc.eu.org/logo/ChannelV.png" group-title="港澳",Channel[V]
-# {homeLanAddress}/udp/239.94.2.55:5140
-#     """)
+    file.write(f"""#KODIPROP:inputstream=inputstream.ffmpegdirect
+#EXTINF:-1 tvg-name="凤凰中文" tvg-logo="https://iptv.zsdc.eu.org/logo/凤凰中文.png" group-title="港澳",凤凰中文
+{homeLanAddress}/udp/239.94.2.52:5140
+#KODIPROP:inputstream=inputstream.ffmpegdirect
+#EXTINF:-1 tvg-name="凤凰资讯" tvg-logo="https://iptv.zsdc.eu.org/logo/凤凰资讯.png" group-title="港澳",凤凰资讯
+{homeLanAddress}/udp/239.94.2.49:5140
+#KODIPROP:inputstream=inputstream.ffmpegdirect
+#EXTINF:-1 tvg-name="星空卫视" tvg-logo="https://iptv.zsdc.eu.org/logo/星空卫视.png" group-title="港澳",星空卫视
+{homeLanAddress}/udp/239.94.2.53:5140
+#KODIPROP:inputstream=inputstream.ffmpegdirect
+#EXTINF:-1 tvg-name="Channel[V]" tvg-logo="https://iptv.zsdc.eu.org/logo/ChannelV.png" group-title="港澳",Channel[V]
+{homeLanAddress}/udp/239.94.2.55:5140
+    """)
     file.close()
     print("Build m3u8 success.")
 
